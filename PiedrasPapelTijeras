@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class PapelTijerasPiedra {
+
+	public static void main(String[] args) {
+	
+		
+		Scanner s1 = new Scanner(System.in);    
+	    System.out.print("Turno del jugador 1 (introduzca piedra, papel o tijeras): ");
+	    String j1 = s1.nextLine();
+	    
+	    System.out.print("Turno del jugador 2 (introduzca piedra, papel o tijeras): ");
+	    Scanner s2 = new Scanner(System.in);
+	    String j2 = s2.nextLine();
+	    
+	    if ((s1 != "piedra" , "papel", "tijeras") || (j2 !="piedra" , "papel", "tijeras")) {
+	    	System.out.println("Datos inválidos");
+	    } else if (j1 == j2) {
+	    	System.out.println("Empate");
+	    } else if(j1 == "piedra" && j2 == "papel") {
+	    	System.out.println("Gana el jugador 2");
+	    } else if(j1 == "papel" && j2 =="tijeras") {
+	    	System.out.println("Gana el jugador 2");
+	    } else if (j1 == "tijeras" && j2 == "piedra") {
+	    	System.out.println("Gana el jugador 2");
+	    } else {
+	    	System.out.println("Gana el jugador 1");
+	    }
+	}//main
+}//PTP
